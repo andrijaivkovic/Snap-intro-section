@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="sass/main.scss" />
+    <script defer type="module" src="./script.js"></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <!--
+      TODO: 
+      Staviti ikonice u a tag 
+    -->
+    <nav class="navigation">
+      <div data-visible="false" class="navigation__background"></div>
+      <div class="navigation__logo-box">
+        <img src="./images/logo.svg" alt="Snap Logo" class="navigation__logo" />
+      </div>
+      <div data-visible="false" class="navigation__links-box">
+        <ul class="navigation__links-list">
+          <li class="navigation__links-list-item">
+            <div class="navigation__link-box">
+              <a href="#" class="navigation__link link">Features</a>
+              <img
+                class="navigation__link-icon"
+                src="./images/icon-arrow-down.svg"
+                alt="Arrow Down Icon"
+              />
+            </div>
+            <div
+              data-visible="false"
+              class="navigation__dropdown-box navigation__dropdown-box--left"
+            >
+              <ul class="navigation__dropdown-list">
+                <li class="navigation__dropdown-list-item">
+                  <img
+                    class="navigation__dropdown-link-icon"
+                    src="./images/icon-todo.svg"
+                    alt="Todo Icon"
+                  />
+                  <a href="#" class="navigation__link link">Todo List</a>
+                </li>
+                <li class="navigation__dropdown-list-item">
+                  <img
+                    class="navigation__dropdown-link-icon"
+                    src="./images/icon-calendar.svg"
+                    alt="Todo Icon"
+                  />
+                  <a href="#" class="navigation__link link">Calendar</a>
+                </li>
+                <li class="navigation__dropdown-list-item">
+                  <img
+                    class="navigation__dropdown-link-icon"
+                    src="./images/icon-reminders.svg"
+                    alt="Todo Icon"
+                  />
+                  <a href="#" class="navigation__link link">Reminders</a>
+                </li>
+                <li class="navigation__dropdown-list-item">
+                  <img
+                    class="navigation__dropdown-link-icon"
+                    src="./images/icon-planning.svg"
+                    alt="Todo Icon"
+                  />
+                  <a href="#" class="navigation__link link">Planning</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__links-list-item">
+            <div class="navigation__link-box">
+              <a href="#" class="navigation__link link">Company</a>
+              <img
+                class="navigation__link-icon"
+                src="./images/icon-arrow-down.svg"
+                alt="Arrow Down Icon"
+              />
+            </div>
+            <div
+              data-visible="false"
+              class="navigation__dropdown-box navigation__dropdown-box--left"
+            >
+              <ul class="navigation__dropdown-list">
+                <li class="navigation__dropdown-list-item">
+                  <a href="#" class="navigation__link link">History</a>
+                </li>
+                <li class="navigation__dropdown-list-item">
+                  <a href="#" class="navigation__link link">Our Team</a>
+                </li>
+                <li class="navigation__dropdown-list-item">
+                  <a href="#" class="navigation__link link">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__links-list-item">
+            <div class="navigation__link-box">
+              <a href="#" class="navigation__link link">Careers</a>
+            </div>
+          </li>
+          <li class="navigation__links-list-item">
+            <div class="navigation__link-box">
+              <a href="#" class="navigation__link link">About</a>
+            </div>
+          </li>
+        </ul>
+        <div class="navigation__buttons-box">
+          <a href="#" class="button button--white button--no-border">Login</a>
+          <a href="#" class="button button--white">Register</a>
+        </div>
+      </div>
+
+      <div class="navigation__hamburger-box"></div>
+    </nav>
+    <header class="header">
+      <div class="header__image-box">
+        <picture>
+          <source
+            media="(min-width:900px)"
+            srcset="./images/image-hero-desktop.png"
+          />
+          <img
+            class="header__image"
+            src="./images/image-hero-mobile.png"
+            alt="Penisej"
+            title=""
+          />
+        </picture>
+
+        <!-- <img
+          srcset="
+            ./images/image-hero-mobile.png  750w,
+            ./images/image-hero-desktop.png 960w
+          "
+          sizes="(min-width: 600px) 750px,
+          960px"
+          src="./images/image-hero-desktop.png"
+          alt="Gabrielle Essence Eau De Parfum Product Image"
+        /> -->
+
+        <!-- <img
+          class="header__image"
+          src="./images/image-hero-mobile.png"
+          alt="Snap Hero Image"
+        /> -->
+      </div>
+      <div class="header__content">
+        <div class="header__text">
+          <h1 class="header__title">Make <span></span> remote work</h1>
+          <p class="header__body">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="button button--black">Learn More</a>
+        </div>
+        <div class="header__clients">
+          <img
+            class="header__client-image"
+            src="./images/client-databiz.svg"
+            alt="Databiz Logo"
+            title="Databiz Inc"
+          />
+          <img
+            class="header__client-image"
+            src="./images/client-audiophile.svg"
+            alt="Audiophile Logo"
+            title="Audiophile Inc"
+          />
+          <img
+            class="header__client-image"
+            src="./images/client-meet.svg"
+            alt="Meet Logo"
+            title="Meet Inc"
+          />
+          <img
+            class="header__client-image"
+            src="./images/client-maker.svg"
+            alt="Maker Logo"
+            title="Maker Inc"
+          />
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+<!-- 
+Features
+Company
+Careers
+About
+
+Login
+Register
+-->

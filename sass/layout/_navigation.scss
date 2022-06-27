@@ -1,0 +1,207 @@
+.navigation {
+  @include flex-row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+
+  gap: 8rem;
+
+  @include mediaQuery(desktop) {
+    justify-content: flex-start;
+  }
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-primary-300, 0.75);
+
+    @include mediaQuery(desktop) {
+      display: none !important;
+    }
+  }
+
+  &__logo-box {
+    height: 2.5rem;
+
+    @include mediaQuery(tablet-port) {
+      height: 3.5rem;
+    }
+  }
+
+  &__logo {
+    height: 100%;
+  }
+
+  &__links-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    @include flex-column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+
+    width: 65vw;
+    height: 100vh;
+    padding: 3rem;
+
+    background-color: #fff;
+
+    @include mediaQuery(tablet-port) {
+      width: 40vw;
+    }
+
+    &[data-visible="false"],
+    &[data-visible="true"] {
+      @include mediaQuery(desktop) {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100%;
+        height: unset;
+        align-items: center;
+        justify-content: space-between;
+        transform: translateY(-4px);
+        padding: 0;
+
+        position: unset;
+        top: unset;
+        left: unset;
+      }
+    }
+  }
+
+  &__links-list {
+    @include flex-column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4rem;
+
+    @include mediaQuery(desktop) {
+      @include flex-row;
+    }
+  }
+
+  &__buttons-box {
+    @include flex-column;
+    align-items: center;
+    justify-content: stretch;
+
+    gap: 1rem;
+
+    width: 100%;
+
+    & > a.button {
+      width: 100%;
+    }
+
+    @include mediaQuery(desktop) {
+      @include flex-row-center;
+      width: unset;
+    }
+  }
+
+  &__links-list-item {
+    position: relative;
+    @include flex-column;
+    gap: 3.5rem;
+    list-style: none;
+  }
+
+  &__link-box {
+    @include flex-row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+
+    @include mediaQuery(tablet-port) {
+      font-size: 2rem;
+    }
+
+    @include mediaQuery(desktop) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__link-icon {
+    height: 6px;
+    width: 10px;
+  }
+
+  &__dropdown-link-icon {
+    height: 16px;
+    width: 16px;
+
+    @include mediaQuery(tablet-port) {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &__dropdown-box {
+    @include mediaQuery(desktop) {
+      position: absolute;
+      top: 4rem;
+      background-color: #fff;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 5px 30px rgba($color-primary-300, 0.25);
+      min-width: max-content;
+
+      &--left {
+        right: 0;
+      }
+
+      &--right {
+        left: 0;
+      }
+    }
+  }
+
+  &__dropdown-list {
+    @include flex-column;
+    gap: 2rem;
+    list-style: none;
+    padding-left: 2rem;
+
+    @include mediaQuery(desktop) {
+      padding: 0;
+    }
+  }
+
+  &__dropdown-list-item {
+    @include flex-row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__hamburger-box {
+    background-image: url("../images/icon-menu.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.8rem;
+    width: 3.2rem;
+
+    justify-self: flex-end;
+    transform: translateY(-5px);
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    @include mediaQuery(tablet-port) {
+      height: 2.5rem;
+      width: 4rem;
+    }
+
+    @include mediaQuery(desktop) {
+      display: none;
+    }
+  }
+}

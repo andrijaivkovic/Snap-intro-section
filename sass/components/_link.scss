@@ -1,0 +1,12 @@
+.link {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-primary-200;
+    transition: all 0.1s ease-out;
+  }
+
+  &:hover {
+    color: $color-primary-300;
+  }
+}

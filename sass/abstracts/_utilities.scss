@@ -1,0 +1,11 @@
+*[data-visible="false"] {
+  display: none !important;
+}
+
+*[data-visible="true"] {
+  display: initial;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}

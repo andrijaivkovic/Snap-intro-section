@@ -1,0 +1,141 @@
+.header {
+  @include flex-column-center;
+  gap: 5rem;
+
+  @include mediaQuery(tablet-port) {
+    padding-inline: 7.5rem;
+  }
+
+  @include mediaQuery(tablet-land) {
+    @include flex-row-reverse-center;
+    gap: 8rem;
+  }
+
+  @include mediaQuery(desktop) {
+    padding-inline: min(12vw, 25rem);
+    gap: 15rem;
+  }
+
+  @include mediaQuery(big-desktop) {
+    gap: 20rem;
+  }
+
+  &__image-box {
+    width: 100%;
+
+    @include mediaQuery(tablet-land) {
+      flex-basis: 50%;
+    }
+
+    @include mediaQuery(big-desktop) {
+      flex-basis: 40%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    @include flex-column-center;
+    gap: 5rem;
+    padding-inline: 1.5rem;
+
+    @include mediaQuery(tablet-port) {
+      gap: 7.5rem;
+    }
+
+    @include mediaQuery(tablet-land) {
+      flex-basis: 50%;
+      padding: 0;
+    }
+
+    @include mediaQuery(desktop) {
+      gap: 12rem;
+    }
+
+    @include mediaQuery(big-desktop) {
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    @include flex-column-center;
+    gap: 2rem;
+
+    @include mediaQuery(tablet-port) {
+      gap: 3rem;
+    }
+
+    @include mediaQuery(tablet-land) {
+      align-items: flex-start;
+    }
+
+    @include mediaQuery(desktop) {
+      gap: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    color: $color-primary-300;
+    text-align: center;
+
+    @include mediaQuery(tablet-port) {
+      font-size: 4.8rem;
+    }
+
+    @include mediaQuery(tablet-land) {
+      text-align: left;
+
+      & > span::after {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+    @include mediaQuery(desktop) {
+      font-size: 5.6rem;
+    }
+
+    @include mediaQuery(big-desktop) {
+      font-size: 7.2rem;
+    }
+  }
+
+  &__body {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+
+    @include mediaQuery(tablet-port) {
+      max-width: 40ch;
+      font-size: 1.8rem;
+    }
+
+    @include mediaQuery(tablet-land) {
+      text-align: left;
+    }
+
+    @include mediaQuery(desktop) {
+      max-width: unset;
+      font-size: 1.8rem;
+    }
+
+    @include mediaQuery(big-desktop) {
+      max-width: 60ch;
+    }
+  }
+
+  &__clients {
+    @include flex-row-center;
+    width: 100%;
+    justify-content: space-between;
+    height: 2rem;
+  }
+
+  &__client-image {
+    height: 100%;
+  }
+}
