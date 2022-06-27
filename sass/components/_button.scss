@@ -39,10 +39,10 @@
   &--white {
     color: $color-primary-200;
     border-color: $color-primary-200;
-    background-color: #fff;
+    background-color: $color-primary-100;
 
     &:hover {
-      background-color: #fff;
+      background-color: $color-primary-100;
       color: $color-primary-300;
       border-color: $color-primary-300;
     }

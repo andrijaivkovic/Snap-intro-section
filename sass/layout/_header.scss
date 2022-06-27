@@ -99,7 +99,7 @@
     }
 
     @include mediaQuery(big-desktop) {
-      font-size: 7.2rem;
+      font-size: 8rem;
     }
   }
 
@@ -124,7 +124,7 @@
     }
 
     @include mediaQuery(big-desktop) {
-      max-width: 60ch;
+      max-width: 45ch;
     }
   }
 
