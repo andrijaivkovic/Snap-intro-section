@@ -36,6 +36,18 @@
     }
   }
 
+  &--pure-white {
+    color: $color-primary-200;
+    border-color: $color-primary-200;
+    background-color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $color-primary-300;
+      border-color: $color-primary-300;
+    }
+  }
+
   &--white {
     color: $color-primary-200;
     border-color: $color-primary-200;

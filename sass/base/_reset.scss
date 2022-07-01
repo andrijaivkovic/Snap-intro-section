@@ -9,11 +9,13 @@
   box-sizing: border-box;
 }
 
-// img,
-// picture {
-//   display: block;
-//   max-width: 100%;
-// }
+img,
+picture {
+  user-select: none;
+
+  // display: block;
+  // max-width: 100%;
+}
 
 input,
 button,
